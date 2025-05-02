@@ -1,4 +1,8 @@
 module.exports = {
+    entry: {
+        index: './src/index.js'
+    },
+    mode: 'production',
     module: {
         rules: [
             {
