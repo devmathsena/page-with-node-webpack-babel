@@ -1,0 +1,25 @@
+{
+  "name": "page-with-node-webpack-babel",
+  "version": "1.0.0",
+  "description": "Página simples criada para prática de uso de Nodejs, Webpack e Babeljs.",
+  "keywords": [
+    "node",
+    "webpack",
+    "babel"
+  ],
+  "homepage": "https://github.com/devmathsena/page-with-node-webpack-babel#readme",
+  "bugs": {
+    "url": "https://github.com/devmathsena/page-with-node-webpack-babel/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devmathsena/page-with-node-webpack-babel.git"
+  },
+  "license": "ISC",
+  "author": "Matheus Sena",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
