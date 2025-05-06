@@ -8,6 +8,8 @@ Este projeto é uma página web simples criada com o objetivo de praticar a conf
 * **Webpack** – Empacotador de módulos
 * **Babel.js** – Transpilador de JS moderno (ES6+) para versões compatíveis com navegadores
 * **CSS** – Estilização básica da página
+* **style-loader & css-loader** – Carregamento e injeção de CSS via JavaScript
+* **webpack-dev-server** – Servidor de desenvolvimento com live reload
 
 ## 📁 Estrutura do Projeto
 
@@ -55,14 +57,25 @@ npm run build
 
 4. **Abra o `dist/index.html` no navegador.**
 
+### 💻 Modo de Desenvolvimento com Webpack Dev Server
+
+Para rodar o projeto em modo de desenvolvimento com recarregamento automático:
+
+```bash
+npm run start
+```
+
+> O Webpack Dev Server iniciará em `http://localhost:8080` (ou porta configurada). Ideal para desenvolvimento local.
+
 ## 🎯 Objetivo
 
 Este projeto tem fins educativos e serve para:
 
 * Aprender a configurar o Webpack manualmente
 * Utilizar Babel para escrever código moderno
+* Carregar e injetar CSS com Webpack
+* Utilizar o webpack-dev-server para melhorar a experiência de desenvolvimento
 * Organizar o projeto com separação entre fonte e build
-* Praticar o uso de módulos, bundling e minificação
 
 ## 📌 Observações
 
