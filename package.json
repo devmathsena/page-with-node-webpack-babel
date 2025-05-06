@@ -19,7 +19,8 @@
   "author": "Matheus Sena",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "dev": "webpack-dev-server"
   },
   "devDependencies": {
     "@babel/cli": "^7.27.1",
