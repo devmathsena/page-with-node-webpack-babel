@@ -20,7 +20,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack"
+    "build": "webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.27.1",
