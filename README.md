@@ -22,14 +22,17 @@ Este projeto é uma página web simples criada com o objetivo de praticar a conf
 │
 ├── src/                   # Código-fonte
 │   ├── index.js           # JS principal da aplicação
-│   └── styles/
-│       └── index.css      # Estilo principal
+│   ├── styles/
+│   │   └── index.css      # Estilo principal
+│   └── assets/
+│       └── icon-square-small.ico  # Ícone do projeto
 │
 ├── babel.config.js        # Configuração do Babel
 ├── package.json           # Informações do projeto e scripts
 ├── package-lock.json      # Mapa exato de dependências
 ├── webpack.config.js      # Configuração do Webpack
 └── README.md              # Este arquivo 😄
+
 ```
 
 ## 🚀 Como Executar o Projeto
