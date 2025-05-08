@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     devServer: {
@@ -27,5 +28,11 @@ module.exports = {
                 use: ['babel-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+            favicon: './src/assets/icon-square-small.ico'
+        })
+    ]
 }
