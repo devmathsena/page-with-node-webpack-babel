@@ -62,10 +62,10 @@ npm run build
 Para rodar o projeto em modo de desenvolvimento com recarregamento automático:
 
 ```bash
-npm run start
+npm run dev
 ```
 
-> O Webpack Dev Server iniciará em `http://localhost:8080` (ou porta configurada). Ideal para desenvolvimento local.
+> O Webpack Dev Server iniciará em `http://localhost:3000` (ou porta configurada). Ideal para desenvolvimento local.
 
 ## 🎯 Objetivo
 
