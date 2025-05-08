@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Webpack + Babel</title>
+    <script src="index.min.js"></script>
+</head>
+
+<body>
+  <button class="theme-toggle" id="theme-toggle-button">Alternar Tema</button>
+    <header>
+        <h1>🚀 Configurando Webpack + Babel com Node.js</h1>
+        <p>Guia prático para iniciar um projeto moderno com JavaScript</p>
+    </header>
+
+    <section>
+        <h2>Passo a Passo</h2>
+        <ol>
+            <li>Crie uma pasta e inicie o projeto:
+                <div class="highlight"><code>mkdir meu-projeto && cd meu-projeto</code><br><code>npm init -y</code>
+                </div>
+            </li>
+            <li>Instale o Webpack e Babel:
+                <div class="highlight">
+                    <code>npm install webpack webpack-cli --save-dev</code><br>
+                    <code>npm install @babel/core @babel/preset-env babel-loader --save-dev</code>
+                </div>
+            </li>
+            <li>Instale os loaders de CSS:
+                <div class="highlight">
+                    <code>npm install css-loader style-loader --save-dev</code>
+                </div>
+            </li>
+            <li>Crie a estrutura de pastas e arquivos:
+                <div class="highlight">
+                    <code>/src/index.js</code><br>
+                    <code>/src/style.css</code><br>
+                    <code>webpack.config.js</code>
+                </div>
+            </li>
+            <li>Configure o Webpack:
+                <div class="highlight">
+                    <pre><code>
+const path = require('path')
+
+module.exports = {
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        }
+    },
+    entry: {
+        index: './src/index.js'
+    },
+    mode: 'production',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].min.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            }, {
+                test: /\.js$/,
+                use: ['babel-loader']
+            }
+        ]
+    }
+}</code></pre>
+                </div>
+            </li>
+            <li>Crie o arquivo de configuração Babel:
+                <div class="highlight"><code>{ "presets": ["@babel/preset-env"] }</code> em <code>babel.config.js</code>
+                </div>
+            </li>
+            <li>Adicione um script de build no <code>package.json</code>:
+                <div class="highlight"><code>"build": "webpack"</code></div>
+            </li>
+            <li>Rode o Webpack:
+                <div class="highlight"><code>npm run build</code></div>
+            </li>
+        </ol>
+    </section>
+    <section>
+        <h2>✨ Vantagens de Usar Webpack, Babel e Loaders</h2>
+
+        <div class="benefit-box">
+            <h3>📦 Webpack</h3>
+            <p>Webpack é um empacotador de módulos poderoso que permite transformar, agrupar e otimizar todos os
+                recursos (JS, CSS, imagens, etc.) em um único ou múltiplos bundles. Ideal para projetos modernos e
+                escaláveis.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>🧠 Babel</h3>
+            <p>O Babel converte código moderno do JavaScript (ES6+) para uma versão compatível com navegadores mais
+                antigos, garantindo maior compatibilidade e evitando erros inesperados no front-end.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>🎨 css-loader</h3>
+            <p>Com o <code>css-loader</code>, você pode importar arquivos CSS diretamente no seu JavaScript. Ele
+                interpreta <code>@import</code> e <code>url()</code> como <code>require()</code>, integrando o estilo ao
+                sistema de módulos.</p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>💡 style-loader</h3>
+            <p>O <code>style-loader</code> injeta os estilos CSS dinamicamente no DOM por meio de
+                <code>&lt;style&gt;</code> tags, facilitando o desenvolvimento sem precisar linkar arquivos CSS
+                manualmente no HTML.
+            </p>
+        </div>
+
+        <div class="benefit-box">
+            <h3>⚡ Organização e Performance</h3>
+            <p>Essa combinação de ferramentas promove um código mais limpo, organizado e com alta performance. Ajuda
+                também a aplicar práticas modernas como lazy loading, tree shaking e modularização.</p>
+        </div>
+    </section>
+</body>
+
+</html>
