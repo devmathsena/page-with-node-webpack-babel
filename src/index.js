@@ -5,19 +5,29 @@ const hello = () => console.log(`Funciona!`);
 hello()
 
 document.addEventListener('DOMContentLoaded', function () {
+    const themeToggleButton = document.querySelector('#theme-toggle-button');
+
+    function setIcon(isLight) {
+        if (themeToggleButton) {
+            themeToggleButton.textContent = isLight ? 'Trocar tema 🌞' : 'Trocar tema 🌙';
+        }
+    }
+
     function toggleTheme() {
-        document.body.classList.toggle('light');
-        localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+        const isLight = document.body.classList.toggle('light');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        setIcon(isLight);
     }
 
     (function () {
-        var savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
+        const savedTheme = localStorage.getItem('theme');
+        const isLight = savedTheme === 'light';
+        if (isLight) {
             document.body.classList.add('light');
         }
+        setIcon(isLight);
     })();
 
-    const themeToggleButton = document.querySelector('#theme-toggle-button');
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
