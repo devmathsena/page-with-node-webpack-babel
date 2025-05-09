@@ -48,6 +48,29 @@ section {
   padding: 1.88rem;
 }
 
+footer {
+  color: var(--text-color);
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: bold;
+  margin-top: 1.88rem;
+}
+
+footer p {
+  margin: 0.31rem 0;
+}
+
+footer a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 h2 {
   color: #4fc3f7;
   margin-top: 1.88rem;
