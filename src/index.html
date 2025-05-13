@@ -15,33 +15,37 @@
     </header>
 
     <section>
-        <h2>Passo a Passo</h2>
-        <ol>
-            <li>Crie uma pasta e inicie o projeto:
-                <div class="highlight"><code>mkdir meu-projeto && cd meu-projeto</code><br><code>npm init -y</code>
-                </div>
-            </li>
-            <li>Instale o Webpack e Babel:
-                <div class="highlight">
-                    <code>npm install webpack webpack-cli --save-dev</code><br>
-                    <code>npm install @babel/core @babel/preset-env babel-loader --save-dev</code>
-                </div>
-            </li>
-            <li>Instale os loaders de CSS:
-                <div class="highlight">
-                    <code>npm install css-loader style-loader --save-dev</code>
-                </div>
-            </li>
-            <li>Crie a estrutura de pastas e arquivos:
-                <div class="highlight">
-                    <code>/src/index.js</code><br>
-                    <code>/src/style.css</code><br>
-                    <code>webpack.config.js</code>
-                </div>
-            </li>
-            <li>Configure o Webpack:
-                <div class="highlight">
-                    <pre><code>
+    <h2>Passo a Passo</h2>
+    <ol>
+        <li>Crie uma pasta e inicie o projeto:
+            <div class="highlight"><code>mkdir meu-projeto && cd meu-projeto</code><br><code>npm init -y</code></div>
+        </li>
+        <li>Instale o Webpack e Babel:
+            <div class="highlight">
+                <code>npm install webpack webpack-cli --save-dev</code><br>
+                <code>npm install @babel/core @babel/preset-env babel-loader --save-dev</code>
+            </div>
+        </li>
+        <li>Instale o webpack-dev-server:
+            <div class="highlight">
+                <code>npm install webpack-dev-server --save-dev</code>
+            </div>
+        </li>
+        <li>Instale os loaders de CSS:
+            <div class="highlight">
+                <code>npm install css-loader style-loader --save-dev</code>
+            </div>
+        </li>
+        <li>Crie a estrutura de pastas e arquivos:
+            <div class="highlight">
+                <code>/src/index.js</code><br>
+                <code>/src/styles/index.css</code><br>
+                <code>webpack.config.js</code>
+            </div>
+        </li>
+        <li>Configure o Webpack:
+            <div class="highlight">
+                <pre><code>
 const path = require('path')
 
 module.exports = {
@@ -70,20 +74,28 @@ module.exports = {
         ]
     }
 }</code></pre>
-                </div>
-            </li>
-            <li>Crie o arquivo de configuração Babel:
-                <div class="highlight"><code>{ "presets": ["@babel/preset-env"] }</code> em <code>babel.config.js</code>
-                </div>
-            </li>
-            <li>Adicione um script de build no <code>package.json</code>:
-                <div class="highlight"><code>"build": "webpack"</code></div>
-            </li>
-            <li>Rode o Webpack:
-                <div class="highlight"><code>npm run build</code></div>
-            </li>
-        </ol>
-    </section>
+            </div>
+        </li>
+        <li>Crie o arquivo de configuração Babel:
+            <div class="highlight">
+                <code>
+module.exports = {
+    presets: [
+        ['@babel/preset-env']
+    ]
+}
+                </code> em <code>babel.config.js</code>
+            </div>
+        </li>
+        <li>Adicione um script de build no <code>package.json</code>:
+            <div class="highlight"><code>"build": "webpack"</code></div>
+        </li>
+        <li>Rode o Webpack:
+            <div class="highlight"><code>npm run build</code></div>
+        </li>
+    </ol>
+</section>
+
     <section>
         <h2>✨ Vantagens de Usar Webpack, Babel e Loaders</h2>
 
